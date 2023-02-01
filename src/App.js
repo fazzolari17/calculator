@@ -12,8 +12,16 @@ function App() {
   const ops = ['/', '*', '+', '-'];
   const decimal = '.';
 
+  console.log('CALC::', calc);
+
   const updateCalc = value => {
-    if ((ops.includes(value) && calc === '')) {
+    if (value === '-' && calc === '') {
+      setCalc(value);
+    }
+    else if (ops.includes(value) && calc === '-') {
+      return;
+    }
+    else if ((ops.includes(value) && calc === '')) {
       return;
     }
     else if ((ops.includes(value) && ops.includes(calc.slice(-1)))) {
