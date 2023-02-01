@@ -12,7 +12,6 @@ function App() {
   const ops = ['/', '*', '+', '-'];
   const decimal = '.';
 
-  console.log('CALC::', calc);
 
   const updateCalc = value => {
     if (value === '-' && calc === '') {
